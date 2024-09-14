@@ -1,0 +1,35 @@
+body {
+    background-image: linear-gradient(#24004b, #430047);
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#b200bb, #480095);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button {
+    background-image: linear-gradient(#4f00a4, #a700af);
+}
+
+button:hover {
+    color: #430047 !important;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}

@@ -1,0 +1,262 @@
+body {
+    background-image: linear-gradient(#24004b, #430047);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.custom-img-size {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+h2 {
+    background: -webkit-linear-gradient(#f200ff, #7b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 3s ease-in-out infinite;
+}
+
+
+
+.prompt {
+    background-color: rgba(41, 44, 49, 0.5);
+    padding: 5px;
+    width: 620px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+input {
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: rgba(41, 44, 49, 0.0);
+    width: 75%;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: solid 1px #9f01a7 !important;
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: solid 1px #430047 !important;
+}
+
+.placeholder {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: default;
+}
+
+.images .image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.images .image-container:hover .overlay {
+    opacity: 1;
+}
+
+.images .image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images .image-container .overlay .button {
+    background: transparent;
+    border: 1px solid #f200ff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    color: #f200ff !important;
+    transition: all 0.3s;
+}
+
+.images .image-container .overlay .button:hover {
+    background: rgba(253, 0, 253, 0.4) !important;
+    border-color: #9f01a7 !important;
+    color: white !important;
+}
+
+.images div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.images div img:hover {
+    cursor: pointer !important;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.images.visible {
+    opacity: 1;
+}
+
+.images.hidden {
+    opacity: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: flex-end !important;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.overlay:hover {
+    cursor: pointer;
+}
+
+.overlay .button {
+    background: #fff;
+    border: 1px solid #9f01a7;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.overlay .button:hover {
+    border: solid 1px #f200ff !important;
+    color: #f200ff !important;
+}
+
+.overlay .button i {
+    margin-right: 5px;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0;
+    opacity: 0;
+    display: none;
+}
+
+.modal.fade-in {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background: transparent;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    color: #858585;
+}
+
+.modal img {
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+    margin: 0;
+}
+
+.btn-saved i {
+    transform: translateX(6px);
+}
+
+.prompt button {
+    border: solid 1px #9f01a7;
+    background: transparent;
+}
+
+.prompt button:hover {
+    border: solid 1px #430047;
+    background-color: transparent !important;
+}
+
+.prompt a {
+    text-decoration: none;
+    transform: translateY(5px);
+}

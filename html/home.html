@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/Screenshot_2024-09-13_043331-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>M1-AI Image Generator - Home</title>
+</head>
+<body class="d-flex flex-column align-items-center justify-content-lg-around text-light text-bg-dark vh-100">
+
+    <h2 class="position-fixed top-0 start-50 translate-middle-x text-light py-5 px-4">
+        M1-AI Image Generator
+    </h2>
+
+    <div class="images" id="imgs">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Image" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="prompt d-flex justify-content-center position-fixed bottom-0 start-50 translate-middle-x">
+        <a href="saved.html"><button type="button" class="btn btn-primary btn-saved rounded-pill pe-4" id="sevedButton">
+            <i class="fa-regular fa-bookmark"></i>
+        </button></a>
+        <input type="text" id="inp" class="p-2 border-0 text-white" placeholder="Search for images">
+        <button type="button" class="btn btn-primary rounded-pill p-2 pe-3" id="generateButton">
+            <i class="fa-solid fa-arrow-up ms-2 text-white"></i>
+        </button>
+    </div>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>
